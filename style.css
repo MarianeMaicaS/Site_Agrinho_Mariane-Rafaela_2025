@@ -22,8 +22,6 @@ header {
     font-weight: 600;
     backdrop-filter: blur(8px);
     position: relative;
-    background: url('images/agua.jpg') no-repeat center fixed;
-    background-size: cover;
 }
 
 /* Container principal */
