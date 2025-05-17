@@ -8,54 +8,8 @@ body {
     padding: 0;
     background: linear-gradient(to bottom, #13547a, #80d0c7);
     color: #fff;
-    font-family: 'Poppins', sans-serif;
     background: url('images/fundo.jpg') no-repeat center fixed;
     background-size: cover;
-
-    /* Destaque ao passar o mouse */
-p:hover {
-    color: #80d0c7;
-    transition: 0.3s ease-in-out;
-}
-
-/* Animação de entrada */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.impacto, .solucoes {
-    animation: fadeIn 1s ease-in-out;
-}
-
-/* Caixas expansíveis */
-.expansivel {
-    cursor: pointer;
-    background: rgba(255, 255, 255, 0.3);
-    padding: 15px;
-    border-radius: 10px;
-    transition: 0.4s;
-}
-
-.expansivel:hover {
-    background: rgba(255, 255, 255, 0.5);
-}
-
-.conteudo {
-    display: none;
-    padding: 10px;
-}
-
-.expansivel:active + .conteudo {
-    display: block;
-}
-
 }
 
 /* Cabeçalho */
@@ -86,6 +40,7 @@ main {
     box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.4);
     position: relative;
     backdrop-filter: blur(6px);
+    transition: 0.4s ease-in-out;
 }
 
 /* Sobreposição de imagens */
@@ -100,6 +55,51 @@ main {
     background-size: cover;
     opacity: 0.2;
     border-radius: 15px;
+}
+
+/* Efeito de destaque nos textos ao passar o mouse */
+p:hover {
+    color: #80d0c7;
+    transition: 0.3s ease-in-out;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.impacto, .solucoes {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Caixas expansíveis */
+.expansivel {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.4s;
+    font-weight: bold;
+}
+
+.expansivel:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.conteudo {
+    display: none;
+    padding: 10px;
+}
+
+.expansivel:active + .conteudo {
+    display: block;
 }
 
 /* Lista personalizada */
