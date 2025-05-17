@@ -1,87 +1,43 @@
-/* Importar fontes */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
-
-/* Estilo geral */
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to bottom, #13547a, #80d0c7);
-    color: #fff;
-    font-family: 'Poppins', sans-serif;
-    background: url('images/fundo.jpg') no-repeat center fixed;
-    background-size: cover;
+/* Destaque ao passar o mouse */
+p:hover {
+    color: #80d0c7;
+    transition: 0.3s ease-in-out;
 }
 
-/* Cabeçalho */
-header {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 30px;
-    text-align: center;
-    font-size: 2em;
-    font-weight: 600;
-    backdrop-filter: blur(8px);
-    position: relative;
+/* Animação de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* Container principal */
-main {
-    padding: 50px;
-    max-width: 900px;
-    margin: auto;
-    position: relative;
-}
-
-/* Seções com profundidade */
 .impacto, .solucoes {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 30px;
-    margin-bottom: 30px;
-    border-radius: 15px;
-    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.4);
-    position: relative;
-    backdrop-filter: blur(6px);
+    animation: fadeIn 1s ease-in-out;
 }
 
-/* Sobreposição de imagens */
-.impacto::before, .solucoes::before {
-    content: "";
-    position: absolute;
-    top: -20px;
-    left: -20px;
-    width: 100%;
-    height: 100%;
-    background: url('images/water-texture.png') no-repeat center;
-    background-size: cover;
-    opacity: 0.2;
-    border-radius: 15px;
-}
-
-/* Lista personalizada */
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    padding: 15px;
+/* Caixas expansíveis */
+.expansivel {
+    cursor: pointer;
     background: rgba(255, 255, 255, 0.3);
-    margin: 8px 0;
-    border-radius: 8px;
-    transition: 0.3s;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.4s;
 }
 
-li:hover {
-    transform: scale(1.08);
+.expansivel:hover {
     background: rgba(255, 255, 255, 0.5);
 }
 
-/* Rodapé */
-footer {
-    background: rgba(255, 255, 255, 0.1);
-    text-align: center;
-    padding: 15px;
-    font-size: 1em;
-    backdrop-filter: blur(6px);
-    position: relative;
+.conteudo {
+    display: none;
+    padding: 10px;
+}
+
+.expansivel:active + .conteudo {
+    display: block;
 }
