@@ -11,6 +11,51 @@ body {
     font-family: 'Poppins', sans-serif;
     background: url('images/fundo.jpg') no-repeat center fixed;
     background-size: cover;
+
+    /* Destaque ao passar o mouse */
+p:hover {
+    color: #80d0c7;
+    transition: 0.3s ease-in-out;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.impacto, .solucoes {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Caixas expansíveis */
+.expansivel {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+.expansivel:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.conteudo {
+    display: none;
+    padding: 10px;
+}
+
+.expansivel:active + .conteudo {
+    display: block;
+}
+
 }
 
 /* Cabeçalho */
@@ -84,48 +129,4 @@ footer {
     font-size: 1em;
     backdrop-filter: blur(6px);
     position: relative;
-}
-
-/* Destaque ao passar o mouse */
-p:hover {
-    color: #80d0c7;
-    transition: 0.3s ease-in-out;
-}
-
-/* Animação de entrada */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.impacto, .solucoes {
-    animation: fadeIn 1s ease-in-out;
-}
-
-/* Caixas expansíveis */
-.expansivel {
-    cursor: pointer;
-    background: rgba(255, 255, 255, 0.3);
-    padding: 15px;
-    border-radius: 10px;
-    transition: 0.4s;
-}
-
-.expansivel:hover {
-    background: rgba(255, 255, 255, 0.5);
-}
-
-.conteudo {
-    display: none;
-    padding: 10px;
-}
-
-.expansivel:active + .conteudo {
-    display: block;
 }
