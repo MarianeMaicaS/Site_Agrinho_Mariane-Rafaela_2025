@@ -9,6 +9,8 @@ body {
     background: linear-gradient(to bottom, #13547a, #80d0c7);
     color: #fff;
     font-family: 'Poppins', sans-serif;
+    background: url('images/fundo.jpg') no-repeat center fixed;
+    background-size: cover;
 }
 
 /* Cabeçalho */
@@ -20,7 +22,7 @@ header {
     font-weight: 600;
     backdrop-filter: blur(8px);
     position: relative;
-    background: url('images/fundo.jpg') no-repeat center fixed;
+    background: url('images/agua.jpg') no-repeat center fixed;
     background-size: cover;
 }
 
